@@ -9,8 +9,8 @@ node {
     sh "${mvnHome}/bin/mvn clean install"
    
     stage 'Archive'
-    archive 'target/petclinic.war'
+    archiveArtifacts 'target/petclinic.war'
    } catch (err) {
-    emailext body: 'Hi, your build successfully failed', subject: 'Test jenkins', to: 'rudakovaa@sgu.ru'
+    emailext body: 'Hi, your build successfully failed', subject: 'Test jenkins', to: 's.g.ytsma@uu.nl'
    }
 }
