@@ -1,3 +1,4 @@
+def server = Artifactory.server 'Artifactory server'
 node {
    stage 'Checkout'
    git url: 'https://github.com/spring-projects/spring-petclinic.git'
